@@ -20,7 +20,7 @@ import android.widget.ListView;
 
 public class LonelyTwitterActivity extends Activity {
 
-	private static final String FILENAME = "file.sav";
+	private static final String FILENAME = "file.sav";//static means shared by all classes. final means cannot change
 	private EditText bodyText;
 	private ListView oldTweetsList;
 	
@@ -34,9 +34,9 @@ public class LonelyTwitterActivity extends Activity {
 		Button saveButton = (Button) findViewById(R.id.save);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
 
-		saveButton.setOnClickListener(new View.OnClickListener() {
+		saveButton.setOnClickListener(new View.OnClickListener() { // class
 
-			public void onClick(View v) {
+			public void onClick(View v) {// a class
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
 				saveInFile(text, new Date(System.currentTimeMillis()));
@@ -48,6 +48,22 @@ public class LonelyTwitterActivity extends Activity {
 
 	@Override
 	protected void onStart() {
+		
+		User u = new Author("Joe"); //with abstract we cannot use user we must use author
+		
+		u.getName();
+		
+		try{
+			u.setName("Othername");
+		} catch (Exception e) {
+			
+		}
+		
+		ArrayList<User> users = new ArrayList<User>(); // == template in C++ 
+		ArrayList<Object> objects;
+		
+	
+		
 		// TODO Auto-generated method stub
 		super.onStart();
 		String[] tweets = loadFromFile();
