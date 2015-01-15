@@ -1,5 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.io.IOException;
+
 public class Author extends User implements UserLike { //have method
 
 	public Author(String string) {
@@ -8,8 +10,11 @@ public class Author extends User implements UserLike { //have method
 	}
 
 	@Override
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String x) throws IOException {
+		if (x.length() > 8){
+			throw new IOException ("Name too long!");
+		}
+		this.name = x;
 		
 	}
 
@@ -18,3 +23,4 @@ public class Author extends User implements UserLike { //have method
 		return null;
 	}
 }
+ 

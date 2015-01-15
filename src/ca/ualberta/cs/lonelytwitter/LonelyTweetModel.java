@@ -9,7 +9,7 @@ public abstract class LonelyTweetModel {
 		return text;
 	}
 	
-	public LonelyTweetModel(String text) {
+	public LonelyTweetModel(String text) { //Constructor
 		super();
 		this.text = text;
 		timestamp = new Date();

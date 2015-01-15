@@ -18,7 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class LonelyTwitterActivity extends Activity {
+public class LonelyTwitterActivity extends Activity { //activity is scream in android
 
 	private static final String FILENAME = "file.sav";//static means shared by all classes. final means cannot change
 	private EditText bodyText;
@@ -47,9 +47,11 @@ public class LonelyTwitterActivity extends Activity {
 	}
 
 	@Override
-	protected void onStart() {
+	protected void onStart() { // throws IOException
 		
 		User u = new Author("Joe"); //with abstract we cannot use user we must use author
+		//u.setName("Joe"); // without abstract
+		//
 		
 		u.getName();
 		

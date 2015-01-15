@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import android.R.bool;
 
-public abstract class connectiondata {
+public abstract class connectiondata extends User{
 	ArrayList<User> followers;
 	ArrayList<User> follows;
 
