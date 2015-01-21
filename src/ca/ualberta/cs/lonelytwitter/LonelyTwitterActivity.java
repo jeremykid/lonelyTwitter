@@ -28,7 +28,7 @@ public class LonelyTwitterActivity extends Activity { //activity is scream in an
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.main); //create the main.xml in the layout
 
 		bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
@@ -40,7 +40,7 @@ public class LonelyTwitterActivity extends Activity { //activity is scream in an
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
 				saveInFile(text, new Date(System.currentTimeMillis()));
-				finish();
+				//finish();
 
 			}
 		});
